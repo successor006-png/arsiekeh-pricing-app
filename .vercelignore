@@ -1,0 +1,12 @@
+.git
+.gitignore
+.env.local
+.env.*.local
+node_modules
+pnpm-lock.yaml
+npm-debug.log
+yarn-error.log
+.DS_Store
+dist
+build
+.manus-logs

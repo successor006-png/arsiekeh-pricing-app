@@ -15,7 +15,7 @@ export default function QualifierScreen({ step, onAnswer }: QualifierScreenProps
     <div className="app">
       <div className="qualifier-screen">
         <div className="qs-header">
-          <div className="qs-logo">A</div>
+          <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663505087318/cfRcVsHzyEqJuuCR79VKrc/ThreeAMonogramwithGoldBar_20260407_070718_0000_ec0b2152.png" alt="Arsiekeh AI Agency" className="qs-logo-img" />
           <h1 className="qs-title">Arsiekeh AI Agency</h1>
           <p className="qs-subtitle">Let's find the perfect package for you</p>
         </div>

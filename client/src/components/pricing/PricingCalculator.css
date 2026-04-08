@@ -1,14 +1,14 @@
 :root {
-  --primary-color: #1f2937;
+  --primary-color: #1a1a1a;
   --secondary-color: #6b7280;
-  --accent-color: #3b82f6;
-  --accent-light: #dbeafe;
+  --accent-color: #c9a961;
+  --accent-light: #f5f1e8;
   --success-color: #10b981;
   --warning-color: #f59e0b;
   --danger-color: #ef4444;
   --border-color: #e5e7eb;
   --bg-light: #f9fafb;
-  --text-dark: #111827;
+  --text-dark: #1a1a1a;
   --text-light: #6b7280;
   --badge-colors: {
     pop: #3b82f6;
@@ -55,18 +55,11 @@
   gap: 16px;
 }
 
-.bld-logo {
-  width: 48px;
-  height: 48px;
-  background: linear-gradient(135deg, #3b82f6 0%, #1f2937 100%);
-  color: white;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  font-weight: 700;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+.bld-logo-img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 .bld-nm {
@@ -117,6 +110,7 @@
   background: var(--accent-color);
   border-color: var(--accent-color);
   color: white;
+  font-weight: 700;
 }
 
 /* Category Strip */
@@ -197,7 +191,7 @@
   align-items: center;
   gap: 16px;
   padding: 16px 20px;
-  background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+  background: linear-gradient(135deg, var(--accent-light) 0%, #faf8f3 100%);
   border-left: 4px solid var(--accent-color);
   border-radius: 8px;
   margin-bottom: 32px;

@@ -82,10 +82,17 @@ export default function PricingCalculator() {
   const handleQualifier = (step: number, answer: string) => {
     if (step === 0) {
       setBizType(answer);
-      setQStep(1);
+      // If user selects "event", skip to builder directly without asking urgency
+      if (answer === "event") {
+        const r = getRecommendation(answer, "");
+        if (r.cat) setActiveCat(r.cat);
+        setScreen("builder");
+      } else {
+        setQStep(1);
+      }
     } else if (step === 1) {
       setUrgency(answer);
-      const r = getRecommendation(answer === "" ? bizType : bizType, answer);
+      const r = getRecommendation(bizType, answer);
       if (r.cat) setActiveCat(r.cat);
       setScreen("builder");
     }
@@ -145,7 +152,7 @@ export default function PricingCalculator() {
       <div className="builder">
         <header className="bld-hdr">
           <div className="bld-logo-wrap">
-            <div className="bld-logo">A</div>
+            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663505087318/cfRcVsHzyEqJuuCR79VKrc/ThreeAMonogramwithGoldBar_20260407_070718_0000_ec0b2152.png" alt="Arsiekeh AI Agency" className="bld-logo-img" />
             <div>
               <div className="bld-nm">Arsiekeh AI Agency</div>
               <div className="bld-sm">Pricing Calculator · 2026</div>
