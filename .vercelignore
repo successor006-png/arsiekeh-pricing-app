@@ -1,12 +1,46 @@
+# Git
 .git
 .gitignore
-.env.local
-.env.*.local
+.gitkeep
+
+# Dependencies
 node_modules
 pnpm-lock.yaml
 npm-debug.log
 yarn-error.log
-.DS_Store
+yarn.lock
+package-lock.json
+
+# Build artifacts
 dist
 build
+.cache
+.next
+out
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE & OS
+.DS_Store
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.prettierignore
+
+# Logs
 .manus-logs
+logs
+*.log
+
+# Server files (not needed for static deployment)
+server/
+patches/
+
+# Development
+.vercelignore
+vercel.json
